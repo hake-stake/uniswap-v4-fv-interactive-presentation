@@ -1145,6 +1145,27 @@
       overflow-wrap: anywhere;
     }
 
+    .pdf-slide .content {
+      width: min(1180px, 100%);
+      height: calc(100vh - 8.5rem);
+    }
+
+    .report-frame {
+      width: 100%;
+      height: min(72vh, 760px);
+      margin-top: 1rem;
+      border: 1px solid rgba(87,146,255,0.45);
+      border-radius: 1rem;
+      background: #FFFFFF;
+      box-shadow: 0 1.2rem 3rem var(--shadow);
+    }
+
+    .pdf-fallback {
+      margin: 0.7rem 0 0;
+      color: var(--muted);
+      font-size: clamp(0.85rem, 1vw, 0.98rem);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -4735,6 +4756,22 @@
           <strong>Certora Uniswap v4 Core Audit Report</strong>
           <span>https://github.com/Uniswap/v4-core/blob/main/docs/security/audits/DRAFT_Certora_audit_core.pdf</span>
         </div>
+      </div>
+    </section>
+
+    <section class="slide pdf-slide" data-title="Embedded report">
+      <div class="content">
+        <p class="kicker">Appendix</p>
+        <h2 class="wide-title">Uniswap v4 Core Audit Report</h2>
+        <iframe
+          class="report-frame"
+          title="Certora Uniswap v4 Core Audit Report"
+          src="https://raw.githubusercontent.com/Uniswap/v4-core/main/docs/security/audits/DRAFT_Certora_audit_core.pdf"
+        ></iframe>
+        <p class="pdf-fallback">
+          If the PDF viewer is blocked, open the report at
+          <a href="https://github.com/Uniswap/v4-core/blob/main/docs/security/audits/DRAFT_Certora_audit_core.pdf">github.com/Uniswap/v4-core</a>.
+        </p>
       </div>
     </section>
   </div>
